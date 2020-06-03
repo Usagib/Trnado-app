@@ -2,7 +2,7 @@
 <br />
 <p align="center">
  <a href="https://github.com/Usagib/js-weather">
-   <img src="src/img/logo.png" alt="Logo" style="width: 20%;">
+   <img src="/src/img/logo.png" alt="Logo" style="width: 20%;">
 
  </a>
 
@@ -61,7 +61,7 @@ Home
 Result
 ![Result](src/view/img/trnado2.png)
 Not found
-![NotFound](src/view/img/trnado2.png)
+![NotFound](src/view/img/trnado3.png)
 
 ## Built With
 Project built in Ruby on Rails
