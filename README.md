@@ -2,7 +2,7 @@
 <br />
 <p align="center">
  <a href="https://github.com/Usagib/js-weather">
-   <img src="/src/img/logo.png" alt="Logo" style="width: 20%;">
+   <img src="src/view/img/logo.png" alt="Logo" style="width: 20%;">
 
  </a>
 
