@@ -26,10 +26,10 @@ form.addEventListener('submit', e => {
 
   const cityName = cityInput.value;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
-  fetch(url, { mode : 'cors' }).then(response => response.json())
+  fetch(url, { mode: 'cors' }).then(response => response.json())
     .then(data => {
       const {
-        weather, main, wind, sys, name
+        weather, main, wind, sys, name,
       } = data;
 
       const showCity = document.getElementById('showCity');
@@ -48,7 +48,7 @@ form.addEventListener('submit', e => {
 
       showCity.innerText = `${name}, ${sys.country}`;
       showTemperature.innerText = `${main.temp} ${symbol} : Feels like: ${main.feels_like}`;
-      showWeather.innerText = `${weather[0]['main']}, ${weather[0]['description']}`;
+      showWeather.innerText = `${weather[0].main}, ${weather[0].description}`;
       showMinMax.innerText = `Max: ${main.temp_max}, Min: ${main.temp_min}`;
       showWind.innerText = `Wind speed: ${wind.speed} mph`;
       showHumidity.innerText = `Humidity: ${main.humidity}`;
@@ -90,7 +90,7 @@ form.addEventListener('submit', e => {
         document.body.style.backgroundSize = "cover";
       }
     })
-    .catch( err => {
+    .catch(err => {
       const showTemperature = document.getElementById('showTemp');
       const showWeather = document.getElementById('showWeather');
       const showMinMax = document.getElementById('showMinMax');
