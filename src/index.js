@@ -25,7 +25,7 @@ form.addEventListener('submit', e => {
   });
 
   const cityName = cityInput.value;
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${unit}`;
   console.log(url);
   fetch(url, {mode:'cors'}).then(response => response.json())
   .then( data => {
