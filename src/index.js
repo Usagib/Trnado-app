@@ -58,7 +58,11 @@ form.addEventListener('submit', e => {
       document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1506588345361-5e12b7840845?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat center center fixed";
       document.body.style.backgroundSize = "cover";
     }
-    if(weather[0]['description'] === 'few clouds') {
+    if(weather[0]['main'] === 'Clouds') {
+      document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1581788945370-3fe92ade72db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center fixed";
+      document.body.style.backgroundSize = "cover";
+    }
+    if(weather[0]['description'] === 'broken clouds') {
       document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1474218861938-d6b14818c8e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80') no-repeat center center fixed";
       document.body.style.backgroundSize = "cover";
     }
@@ -66,16 +70,12 @@ form.addEventListener('submit', e => {
       document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1543226862-39202f29696f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed";
       document.body.style.backgroundSize = "cover";
     }
-    if(weather[0]['description'] === 'broken clouds') {
-      document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1581788945370-3fe92ade72db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80') no-repeat center center fixed";
+    if(weather[0]['main'] === 'Rain') {
+      document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80') no-repeat center center fixed";
       document.body.style.backgroundSize = "cover";
     }
     if(weather[0]['description'] === 'shower rain') {
       document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1519692933481-e162a57d6721?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed";
-      document.body.style.backgroundSize = "cover";
-    }
-    if(weather[0]['description'] === 'rain') {
-      document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80') no-repeat center center fixed";
       document.body.style.backgroundSize = "cover";
     }
     if(weather[0]['description'] === 'thunderstorm') {
@@ -90,6 +90,20 @@ form.addEventListener('submit', e => {
       document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1438803235109-d737bc3129ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80') no-repeat center center fixed";
       document.body.style.backgroundSize = "cover";
     }
+  })
+  .catch( err => {
+    const showTemperature = document.getElementById('showTemp');
+    const showWeather = document.getElementById('showWeather');
+    const showMinMax = document.getElementById('showMinMax');
+    const showWind = document.getElementById('showWind');
+    const showHumidity = document.getElementById('showHumid');
+    const showCity = document.getElementById('showCity');
+    showCity.innerText = 'invalid city, you can search by city and country code (Mexico city, MX)';
+    showTemperature.innerHTML = `check country codes <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes">Here</a>`;
+    showWeather.innerText = '';
+    showHumidity.innerText = '';
+    showWind.innerText = '';
+    showMinMax.innerText = '';
   });
 
 });
