@@ -90,7 +90,7 @@ form.addEventListener('submit', e => {
         document.body.style.backgroundSize = "cover";
       }
     })
-    .catch(err => {
+    .catch(() => {
       const showTemperature = document.getElementById('showTemp');
       const showWeather = document.getElementById('showWeather');
       const showMinMax = document.getElementById('showMinMax');
