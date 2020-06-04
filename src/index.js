@@ -98,6 +98,7 @@ form.addEventListener('submit', e => {
         default:
           return false;
       }
+      return true;
     })
     .catch(() => {
       alert('We could not locate the city'); // eslint-disable-line no-alert
