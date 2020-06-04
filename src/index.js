@@ -62,6 +62,8 @@ form.addEventListener('submit', e => {
           document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1428592953211-077101b2021b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80') no-repeat center center fixed";
           document.body.style.backgroundSize = "cover";
           break;
+        default:
+          return false;
       }
 
       switch (weather[0].description) {
@@ -93,6 +95,8 @@ form.addEventListener('submit', e => {
           document.body.style.background = "#ffffff url('https://images.unsplash.com/photo-1438803235109-d737bc3129ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=666&q=80') no-repeat center center fixed";
           document.body.style.backgroundSize = "cover";
           break;
+        default:
+          return false;
       }
     })
     .catch(() => {
