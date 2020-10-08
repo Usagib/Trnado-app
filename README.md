@@ -30,7 +30,7 @@
 
 ## About The Project
 
-this app uses OpenWeather API to fetch weather forecast for several cities around the globe, the minimal UI allows quick and easy navigability and accesibility.
+this app uses OpenWeather API to fetch weather forecast for several cities around the globe, the minimal UI allows quick and easy navigability and accessibility.
 
 ## Live Demo
 
@@ -53,7 +53,7 @@ You can acess the live demo or:
 
 * User can search for city or city and country code
 * Temperature and weather forecast is shown
-* background image changes according search result
+* background image changes according to search result
 
 ### Screenshots
 Home
@@ -78,10 +78,12 @@ Additional packages used
 
 API used
 * [OpenWeatherMAp](https://openweathermap.org)
+
 ## Contact
 
-Eduardo Bonilla Github [https://github.com/UsagiB](https://github.com/UsagiB)
-Eduardo Bonilla Portfolio [Usagib.github.io](http://usagib.github.io)
+* Eduardo Bonilla Cáceres - eduardobonillac@gmail.com
+* [My Portfolio](https://usagib.surge.sh)
+* [My Twitter](https://twitter.com/UsagiBonilla)
 
 
 ## Show your support
